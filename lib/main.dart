@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
 
+void main() {
+  runApp(
+    Container(
+      child: Center(
+        child: Text(
+          'Flutterando',
+          textDirection: TextDirection.ltr,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 50.0,
+          ),
+        ),
+      ),
+    ),
+  );
+}
