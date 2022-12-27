@@ -20,10 +20,18 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Center(
-        child: Text('Flutterando'),
-      ),
-    );
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Home'),
+        ),
+        body: Center(
+          child: const Text('Flutterando'),
+        ),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: () {
+            print('Clicou');
+          },
+        ));
   }
 }
