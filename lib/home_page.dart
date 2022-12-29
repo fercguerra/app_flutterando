@@ -12,18 +12,31 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Home'),
+          title: Text('Curso Flutter'),
         ),
-        body: Center(
-          child: Text('Flutterando $counter'),
-        ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: () {
-            setState(() {
-              counter++;
-            });
-          },
+        body: SizedBox(
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                color: Colors.red,
+                width: 80,
+                height: 80,
+              ),
+              Container(
+                color: Colors.blue,
+                width: 80,
+                height: 80,
+              ),
+              Container(
+                color: Colors.green,
+                width: 80,
+                height: 80,
+              )
+            ],
+          ),
         ));
   }
 }
