@@ -11,33 +11,26 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Curso Flutter'),
-        ),
-        body: SizedBox(
-          width: double.infinity,
-          height: double.infinity,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+      appBar: AppBar(
+        title: Text('Curso Flutter'),
+      ),
+      body: SizedBox(
+        width: double.infinity,
+        height: double.infinity,
+        child: SingleChildScrollView(
+          child: Column(
             children: [
-              Container(
-                color: Colors.red,
-                width: 80,
-                height: 80,
-              ),
-              Container(
-                color: Colors.blue,
-                width: 80,
-                height: 80,
-              ),
-              Container(
-                color: Colors.green,
-                width: 80,
-                height: 80,
-              )
+              for (var i = 0; i < 10; i++)
+                Container(
+                  color: Colors.red,
+                  margin: const EdgeInsets.all(12),
+                  width: 80,
+                  height: 80,
+                ),
             ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
