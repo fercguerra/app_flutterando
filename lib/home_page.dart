@@ -10,6 +10,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final names = ['João', 'Maria', 'Pedro', 'Fernanda', "Vitor"];
     return Scaffold(
       appBar: AppBar(
         title: Text('Curso Flutter'),
@@ -17,19 +18,14 @@ class _HomePageState extends State<HomePage> {
       body: SizedBox(
         width: double.infinity,
         height: double.infinity,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              for (var i = 0; i < 10; i++)
-                Container(
-                  color: Colors.red,
-                  margin: const EdgeInsets.all(12),
-                  width: 80,
-                  height: 80,
-                ),
-            ],
-          ),
-        ),
+        child: ListView.builder(
+            itemCount: names.length,
+            itemBuilder: (context, index) {
+              final name = names[index];
+              return ListTile(
+                title: Text(name),
+              );
+            }),
       ),
     );
   }
