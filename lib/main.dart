@@ -25,51 +25,31 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
-        backgroundColor: Colors.deepPurple,
         title: const Text(
           'Curso Flutter',
-          
-          style: TextStyle(
-            color: Colors.white,
-          ),
-          textAlign: TextAlign.center,
         ),
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Expanded(
-                    child: TextField(
-                  controller: controller,
-                )),
-                IconButton(
-                    onPressed: () {
-                      final text = controller.text;
-                      setState(() {
-                        list.add(text);
-                      });
-                      controller.clear();
-                    },
-                    icon: Icon(Icons.add)),
-              ],
+      body: Center(
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(
+              color: Colors.red,
+              height: 100,
+              width: 100,
             ),
-          ),
-          Expanded(
-            child: ListView.builder(
-              itemCount: list.length,
-              itemBuilder: (context, index) {
-                final item = list[index];
-                return ListTile(
-                  title: Text(item),
-                );
-              },
+            Container(
+              color: Colors.blue,
+              height: 70,
+              width: 70,
             ),
-          ),
-        ],
+            Container(
+              color: Colors.green,
+              height: 40,
+              width: 40,
+            ),
+          ],
+        ),
       ),
     );
   }
