@@ -25,7 +25,16 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Curso Flutter'),
+
+        backgroundColor: Colors.deepPurple,
+        title: const Text(
+          'Curso Flutter',
+          
+          style: TextStyle(
+            color: Colors.white,
+          ),
+          textAlign: TextAlign.center,
+        ),
       ),
       body: Column(
         children: [
