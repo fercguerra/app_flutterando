@@ -42,9 +42,9 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Container(
-              color: Colors.blue,
-              height: 70,
-              width: 70,
+              color: Colors.black.withOpacity(0.60),
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
             ),
             Container(
               color: Colors.green,
