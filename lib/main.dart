@@ -24,11 +24,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Curso Flutter',
-        ),
-      ),
       body: Center(
         child: Stack(
           alignment: Alignment.center,
@@ -46,10 +41,20 @@ class _HomePageState extends State<HomePage> {
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
             ),
-            Container(
-              color: Colors.green,
-              height: 40,
-              width: 40,
+            SizedBox(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  FlutterLogo(
+                    size: 150,
+                    textColor: Colors.white,
+                    style: FlutterLogoStyle.horizontal,
+                  ),
+                  ElevatedButton(onPressed: () {}, child: Text('Entrar no app'))
+                ],
+              ),
             ),
           ],
         ),
